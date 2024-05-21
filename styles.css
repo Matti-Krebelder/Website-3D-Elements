@@ -1,0 +1,39 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .card {
+    perspective: 1000px;
+  }
+  
+  .card-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.6s, box-shadow 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+  }
+  
+  .card-content h2,
+  .card-content p {
+    transition: transform 0.6s;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+  }
+  
+  .card:hover .card-content {
+    transform: rotateY(20deg);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  }
+  
+  .card:hover .card-content h2,
+  .card:hover .card-content p {
+    transform: translateY(-10px);
+  }
